@@ -1,6 +1,5 @@
-resource "ec2_instance" "ec2" {
-       name= var.name
-       ami_id=data.ami_id
+resource "aws_instance" "ec2" {
+       ami = data.ami_id
        instance_type=var.instance_name
        vpc_security_group_ids =[aws.security_group.venu.id]
 
@@ -11,8 +10,8 @@ resource "ec2_instance" "ec2" {
 
 }
 
-resource "security_group" "venu"{
-    name=var.security_group_name
+resource "aws_security_group" "venu"{
+    name= var.security_group_name
     description= "aloow all"
 
     egress {
