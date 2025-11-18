@@ -19,13 +19,13 @@ variable "security_group_name" {
 }
 
 variable "from_port" {
-    type =list(numbers)
+    type =list(number)
     default = [22, 80, 443]
   
 }
 
 variable "to_port" {
-    type = list(numbers)
+    type = list(number)
     default = [22, 80, 443]
   
 }
