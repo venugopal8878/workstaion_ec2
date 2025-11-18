@@ -4,7 +4,7 @@ variable "name"{
 }
 
 variable "instance_name"{
-    default=var.environment == "prod" ? "t3.small": "t2.micro"
+    default="t2.micro"
 }
 
 variable "environment"{
